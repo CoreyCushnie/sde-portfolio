@@ -1,8 +1,8 @@
 import * as React from "react"
-import Seo from "../components/seo.js"
+import Seo from "../../components/seo.js"
 
-import Text from "../components/Text/Text.jsx"
-import Button from "../components/button/button.component"
+import Text from "../../components/Text/Text.jsx"
+import Button from "../../components/button/button.component"
 
 const introDetailsStyle = {
   position: `relative`,

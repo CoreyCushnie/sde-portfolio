@@ -1,6 +1,6 @@
 // React 
 import * as React from "react"
-import PropTypes, { func } from "prop-types"
+import PropTypes from "prop-types"
 
 import Seo from "./seo.js";
 
@@ -8,7 +8,7 @@ import Seo from "./seo.js";
 import "../styles/layout.css"
 
 const Layout = ({ seo, extended, children }) => {
-  
+
   return (
     <>
     <Seo title={seo}/>

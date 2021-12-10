@@ -1,59 +1,38 @@
 import * as React from "react"
-import { Link, useStaticQuery, graphql } from "gatsby"
 
 // Components
 import Layout from "../components/layout"
-import Seo from "../components/seo"
 import Header from "../components/header/header.component"
-import Text from "../components/Text/Text"
-import Button from "../components/button/button.component"
+
 
 // Pages
-import HomePage from "./homepage"
-import AboutPage from "./About"
+import HomePage from "./page/homepage"
+import AboutPage from "./page/about"
+
+//Data
+import GET_DATA from "../queries";
+import Seo from "../components/seo"
+
 
 const IndexPage = () => {
-  const data = useStaticQuery(graphql`
-  query ABOUT_ME {
-    site {
-      siteMetadata {
-        pageData {
-          navLinks {
-            home
-            about
-            projects
-            services
-            contact
-          }
-          aboutMeData{
-            p1
-            p2
-            p3
-          }
-          personalInfo {
-            Name
-            Email
-            Phone
-            Social_Links{
-              linkedin
-              github
-              dribbble
-            }
-          }
-        }
-      }
-    }
-  }
-  `)
+
+  // Run all queries
+  const data = GET_DATA()
+
+  // Data for components
+  const headerData = data.site.siteMetadata?.pageData.navLinks
+  const contactData = data.site.siteMetadata?.pageData.personalInfo
+  const aboutData = data.site.siteMetadata?.pageData.aboutMeData
 
   return (
     <>
-      <Header data={data} />
-      <Layout seo="Home" extended>
+      <Seo title="Home"/>
+      <Header headerData={headerData} contactData={contactData} />
+      <Layout seoTitle="Home" extended>
         <HomePage />
       </Layout>
-      <Layout seo="About">
-        <AboutPage />
+      <Layout seoTitle="About">
+        <AboutPage aboutData={aboutData}/>
       </Layout>
     </>
   )

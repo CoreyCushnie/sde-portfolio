@@ -12,10 +12,10 @@ module.exports = {
     pageData: {
       navLinks: {
         home: `/`,
-        about: `/#about`,
-        projects: `/#projects`,
-        services: `/#services`,
-        contact: `/#contact`,
+        about: `#about`,
+        projects: `#projects`,
+        services: `#services`,
+        contact: `#contact`,
       },
       aboutMeData: {
         p1: "I’m a front-end web and mobile developer with 10 years of experimenting with different languages and frameworks and 6 years of freelance experience. Growing up in the city, I find inspiration around every corner. I love every step of the SDLC process and pride myself in the fast, responsive, and aestically pleasing applications I’ve had the pleasure to be apart of. Everything i’ve done until this point has helped me develop the skills needed to take a project to its next level. ",

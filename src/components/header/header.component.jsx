@@ -1,6 +1,6 @@
 import * as React from "react"
 import PropTypes from "prop-types"
-import { Link, graphql, useStaticQuery } from "gatsby"
+import { Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
 import Text from '../Text/Text';
@@ -9,9 +9,8 @@ import ContactInfo from "../contact/contact.component";
 
 const navTitles = ["home", "about", "projects", "services", "contact"]
 
-const Header = ({ data }) => {
+const Header = ({ headerData, contactData }) => {
   
-  const header_nav = data.site.siteMetadata?.pageData.navLinks
 
   return (
     <header>
@@ -39,7 +38,7 @@ const Header = ({ data }) => {
             <Text margin="20px 0 0 0">
               <Link
                 className="nav-links"
-                to={header_nav[val]}
+                to={headerData[val]}
               >
                 {val.toUpperCase()}
               </Link>
@@ -47,7 +46,7 @@ const Header = ({ data }) => {
           )
         })}
       </div>
-      <ContactInfo data={data}/>
+      <ContactInfo data={contactData}/>
     </header>
   )
 }

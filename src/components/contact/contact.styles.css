@@ -7,7 +7,16 @@
   }
   
   .social-icons{
-    padding-right: 10px;
+    padding: 0px 20px 0 0;
+    cursor: pointer;
+    transition: 200ms ease-out;
+    animation-duration: 2ms;
+  }
+  
+  .social-icons:hover{
+    padding: 0px 20px 0 0;
+    cursor: pointer;
+    transform: scale(1.1);
   }
   
   .contact-details{
