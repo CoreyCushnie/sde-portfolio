@@ -1,3 +1,23 @@
+
 .about-details-container{
+    margin-top: -5vh;
     width: 80%;
+}
+
+.bottom-container{
+    display: flex;
+    margin-top: 40px;
+    
+    
+}
+
+.about-education{
+    flex: 1;
+    justify-content: space-between;
+
+}
+
+.about-skills{
+    flex: 1
+
 }

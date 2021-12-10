@@ -8,7 +8,7 @@ export default function TextComponent ({ ...props})  {
 };
 
 const Text = styled.p`
-    color: ${(props => props.color ? props.color : "white" )};
+    color: ${(props => props.color ? props.color : "#f8f8f8" )};
     font-family: montserrat, sans-serif;
     align-self: ${({ alignSelf }) => alignSelf ? alignSelf : "center"};
     font-size: ${({ size }) => size ? `${size}px`  : "12px"};
