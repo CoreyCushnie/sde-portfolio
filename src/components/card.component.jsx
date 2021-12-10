@@ -1,8 +1,8 @@
 import * as React from "react"
 
-import Text from "../Text/Text"
+import Text from "./Text"
 
-import "./card.style.css"
+import "../styles/card.style.css"
 
 const Card = ({ ref, school, major, studies, dates }) => {
   const titleColor = "#B72828"

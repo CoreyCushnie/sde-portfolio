@@ -1,10 +1,10 @@
 import * as React from "react"
 
-import Text from "../Text/Text"
+import Text from "./Text"
 import { BsLinkedin, BsGithub, BsDribbble, BsFilePdf } from "react-icons/bs"
 
-import pdf from "../../resume.pdf"
-import "./contact.styles.css"
+import pdf from "../resume.pdf"
+import "../styles/contact.styles.css"
 
 const ContactInfo = ({ data }) => {
   const { Email, Phone } = data

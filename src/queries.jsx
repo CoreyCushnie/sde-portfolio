@@ -1,8 +1,8 @@
 import { useStaticQuery, graphql } from "gatsby"
 
 export default function GET_DATA() {
-    const data = useStaticQuery(graphql`
-    query ABOUT_ME {
+  const data = useStaticQuery(graphql`
+    query ALL_DATA {
       site {
         siteMetadata {
           pageData {
@@ -23,10 +23,20 @@ export default function GET_DATA() {
               Email
               Phone
               Social_Links {
-                linkedin
-                github
                 dribbble
+                github
+                linkedin
               }
+            }
+            skillsData {
+              Front_End
+              Back_End
+              Web
+              Mobile
+              Javascript
+              Python
+              Gatsby
+              ExpressJS
             }
           }
         }
@@ -34,4 +44,4 @@ export default function GET_DATA() {
     }
   `)
   return data
-} 
+}

@@ -1,5 +1,7 @@
 header{
     position: fixed;
+    z-index: 1;
+    
 }
 
 .nav-container {
@@ -9,6 +11,8 @@ header{
     top: 1vh;
     right: 5vw;
     position: fixed;
+    backdrop-filter: blur(10px);
+    
 
 }
 
@@ -19,6 +23,7 @@ header{
     padding: 10px; 
     transition: 200ms ease-out;
     animation-duration: 2ms;
+
 }
 
 .nav-links:hover {

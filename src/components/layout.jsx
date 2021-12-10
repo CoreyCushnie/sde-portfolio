@@ -2,7 +2,7 @@
 import * as React from "react"
 import PropTypes from "prop-types"
 
-import Seo from "./seo.js";
+import Seo from "./seo";
 
 // CSS 
 import "../styles/layout.css"

@@ -31,8 +31,17 @@ module.exports = {
           github: `https://github.com/CoreyCushnie`,
           dribbble: `https://dribbble.com/CoreyCushnie`
         },
-        
       },
+      skillsData: {
+        "Front-End": 91,
+        "Back-End": 79,
+        "Web": 93,
+        "Mobile": 89,
+        "Javascript": 87,
+        "Gatsby": 83,
+        "ExpressJS": 81,
+        "Python": 90
+      }
     },
   },
   plugins: [

@@ -1,19 +1,20 @@
 import * as React from "react"
 
 import Seo from "../../components/seo"
-import Text from "../../components/Text/Text"
-import Card from "../../components/card/card.component";
+import Text from "../../components/Text"
+import Card from "../../components/card.component";
+import Skills from "../../components/skills.component";
 
 import "../../styles/about.style.css";
 
-const AboutPage = ({ seo, aboutData }) => {
+const AboutPage = ({ aboutData, skillsData }) => {
   const textSize = 14;
   return (
     <div id="about">
-      <Seo title={seo} />
+
       <div className="about-details-container">
-        <Text size="38" weight="600" color="black">
-          About me
+        <Text size="32" weight="600" color="black">
+          ABOUT ME
         </Text>
         <Text size={textSize} margin="15px 0" color="black">
           {aboutData.p1}
@@ -27,8 +28,8 @@ const AboutPage = ({ seo, aboutData }) => {
       </div>
       <div className="bottom-container">
         <div className="about-education">
-        <Text size="38" weight="600" color="black">
-          Education
+        <Text size="32" weight="600" color="black">
+          EDUCATION
         </Text>
 
         <Card 
@@ -51,9 +52,10 @@ const AboutPage = ({ seo, aboutData }) => {
 
         </div>
         <div className="about-skills">
-        <Text size="38" weight="600" color="black">
-          Skills
+        <Text size="32" weight="600" color="black">
+          SKILLS
         </Text>
+        <Skills skillsData={skillsData}/>
         </div>
       </div>
     </div>

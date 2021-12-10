@@ -1,7 +1,7 @@
 import React from 'react';
-import Text from '../Text/Text'
+import Text from './Text'
 
-import '../../styles/button.style.css';
+import '../styles/button.style.css';
 
 
 const Button = ({onClick, ...props}) => {
