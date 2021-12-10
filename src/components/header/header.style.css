@@ -1,0 +1,30 @@
+header{
+    position: fixed;
+}
+
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 1vh;
+    right: 5vw;
+    position: fixed;
+
+}
+
+.nav-links {
+    text-decoration: none;
+    color: #282828;
+    margin-left: 1px;
+    padding: 10px; 
+    transition: 200ms ease-out;
+    animation-duration: 2ms;
+}
+
+.nav-links:hover {
+    background-color: #B72828;
+    color: #F8F8FF;
+
+
+
+}

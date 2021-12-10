@@ -1,0 +1,17 @@
+.button-container {
+    background-color: #B72828;
+    padding: 20px;
+    width: fit-content;
+    cursor: pointer;
+    transition: 200ms ease-out;
+    animation-duration: 2ms;
+}
+
+.button-container:hover {
+    background-color: #B72828;
+    padding: 20px;
+    width: fit-content;
+    cursor: pointer;
+    box-shadow: -5px 5px #B728285f;
+    transform: translateX(5px) translateY(-5px);
+}

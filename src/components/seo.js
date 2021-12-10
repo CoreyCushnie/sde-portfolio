@@ -16,17 +16,19 @@ function Seo({ description, lang, meta, title }) {
       query {
         site {
           siteMetadata {
-            title
-            description
-            author
+            siteInfo{
+              title
+              description
+              author
+            }
           }
         }
       }
     `
   )
 
-  const metaDescription = description || site.siteMetadata.description
-  const defaultTitle = site.siteMetadata?.title
+  const metaDescription = description || site.siteMetadata.siteInfo.description
+  const defaultTitle = site.siteMetadata?.siteInfo.title
 
   return (
     <Helmet
@@ -58,7 +60,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `twitter:creator`,
-          content: site.siteMetadata?.author || ``,
+          content: site.siteMetadata?.siteInfo.author || ``,
         },
         {
           name: `twitter:title`,

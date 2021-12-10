@@ -1,31 +1,62 @@
 import * as React from "react"
-import { Link } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
+import { Link, useStaticQuery, graphql } from "gatsby"
 
+// Components
 import Layout from "../components/layout"
 import Seo from "../components/seo"
+import Header from "../components/header/header.component"
+import Text from "../components/Text/Text"
+import Button from "../components/button/button.component"
 
-const IndexPage = () => (
-  <Layout>
-    <Seo title="Home" />
-    <h1>Hi people</h1>
-    <p>Welcome to your new Gatsby site.</p>
-    <p>Now go build something great.</p>
-    <StaticImage
-      src="../images/gatsby-astronaut.png"
-      width={300}
-      quality={95}
-      formats={["auto", "webp", "avif"]}
-      alt="A Gatsby astronaut"
-      style={{ marginBottom: `1.45rem` }}
-    />
-    <p>
-      <Link to="/page-2/">Go to page 2</Link> <br />
-      <Link to="/using-typescript/">Go to "Using TypeScript"</Link> <br />
-      <Link to="/using-ssr">Go to "Using SSR"</Link> <br />
-      <Link to="/using-dsg">Go to "Using DSG"</Link>
-    </p>
-  </Layout>
-)
+// Pages
+import HomePage from "./homepage"
+import AboutPage from "./About"
+
+const IndexPage = () => {
+  const data = useStaticQuery(graphql`
+  query ABOUT_ME {
+    site {
+      siteMetadata {
+        pageData {
+          navLinks {
+            home
+            about
+            projects
+            services
+            contact
+          }
+          aboutMeData{
+            p1
+            p2
+            p3
+          }
+          personalInfo {
+            Name
+            Email
+            Phone
+            Social_Links{
+              linkedin
+              github
+              dribbble
+            }
+          }
+        }
+      }
+    }
+  }
+  `)
+
+  return (
+    <>
+      <Header data={data} />
+      <Layout seo="Home" extended>
+        <HomePage />
+      </Layout>
+      <Layout seo="About">
+        <AboutPage />
+      </Layout>
+    </>
+  )
+}
 
 export default IndexPage
