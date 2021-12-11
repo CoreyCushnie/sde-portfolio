@@ -30,13 +30,13 @@ const Projects = props => {
             <div className="projects-selection-container">
             {selections.map((val, idx) => {
                 return (
-                    <div className="selection-button" style={{padding: "20px", backgroundColor: currentView === idx ? "#B72828" : "#f8f8ff"}} onClick={()=>setCurrentView(idx)}>
-                        <Text size={14} weight="600" color={currentView === idx ? "#f8f8ff" : "#B728285f"}>{val.toUpperCase()}</Text>
+                    <div className="selection-button" style={{padding: "10px 20px ", backgroundColor: currentView === idx ? "#B72828" : "#f8f8ff"}} onClick={()=>setCurrentView(idx)}>
+                        <Text size={14} weight="600" color={currentView === idx ? "#f8f8ff" : "#E0E0E0"}>{val.toUpperCase()}</Text>
                     </div>
                 )
-            })}
-            </div>
-            
+            })} 
+            </div>  
+            <div className=""></div> 
         </div>
       </Layout>
     </>
@@ -44,5 +44,3 @@ const Projects = props => {
 }
 
 export default Projects
-
-//
