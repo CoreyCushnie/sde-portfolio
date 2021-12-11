@@ -19,6 +19,7 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
+
 }
 
 .layout-container {
@@ -36,8 +37,11 @@ body {
 
 .layout-content-right {
   flex: 1;
+  flex-wrap: wrap;
   margin-top: 10vh;
+  margin-left: 100px;
   height: 90vh;
+  width: fit-content;
 }
 
 .logo {

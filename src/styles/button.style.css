@@ -1,17 +1,18 @@
 .button-container {
-    background-color: #B72828;
-    padding: 20px;
-    width: fit-content;
-    cursor: pointer;
-    transition: 200ms ease-out;
-    animation-duration: 2ms;
+  background-color: #b72828;
+  padding: 20px;
+  width: max-content;
+    margin-top: 10px;
+  cursor: pointer;
+  transition: 200ms ease-out;
+  animation-duration: 2ms;
 }
 
 .button-container:hover {
-    background-color: #B72828;
-    padding: 20px;
-    width: fit-content;
-    cursor: pointer;
-    box-shadow: -5px 5px #B728285f;
-    transform: translateX(5px) translateY(-5px);
+  background-color: #b72828;
+  padding: 20px;
+  width: fit-content;
+  cursor: pointer;
+  box-shadow: -5px 5px #b728285f;
+  transform: translateX(5px) translateY(-5px);
 }

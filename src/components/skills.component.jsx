@@ -42,7 +42,6 @@ const Skills = ({ skillsData }) => {
     }
     return meters
   }
-  const textSize = 14
   
   return (
     <div style={{width: "70%"}}>

@@ -1,12 +1,25 @@
 import * as React from "react";
 
+import MiniProjectCard from "../../components/mini-project-card.component";
+
 import Text from "../../components/Text"
-const Projects = ({}) => {
+import Button from "../../components/button.component"
+
+
+import "../../styles/project.style.css"
+
+const ProjectPreviewPage = (props) => {
     return (
         <div id="projects">
             <Text size="32" color="#282828" weight="900">PROJECTS</Text>
+            <div className="project-preview-container">
+                <MiniProjectCard />
+            </div>
+            <Button navigateTo="/projects" >More Projects</Button>
         </div>
     )
 }
 
-export default Projects;
+export default ProjectPreviewPage;
+
+// 

@@ -8,7 +8,7 @@ import Header from "../components/header.component"
 // Pages
 import HomePage from "./page/homepage"
 import AboutPage from "./page/about"
-import Projects from "./page/project"
+import ProjectPreviewPage from "./page/project"
 
 //Data
 import GET_DATA from "../queries";
@@ -37,7 +37,7 @@ const IndexPage = () => {
         <AboutPage aboutData={aboutData} skillsData={skillsData}/>
       </Layout>
       <Layout seoTitle="Projects">
-        <Projects/>
+        <ProjectPreviewPage/>
       </Layout>
     </>
   )

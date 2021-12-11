@@ -31,8 +31,8 @@ const Header = ({ headerData, contactData }) => {
       <div className="nav-container">
         {navTitles.map(val => {
           return (
-            <Text margin="20px 0 0 0">
-              <Link className="nav-links" to={headerData[val]}>
+            <Text margin="10px 0 0 0">
+              <Link className="nav-links" to={headerData[val] === "/" ? "/" : `/${headerData[val]}`}>
                 {val.toUpperCase()}
               </Link>
             </Text>

@@ -1,5 +1,4 @@
 import * as React from "react"
-import Seo from "../../components/seo"
 
 import Text from "../../components/Text"
 import Button from "../../components/button.component"
@@ -10,10 +9,9 @@ const introDetailsStyle = {
   textAlign: `left`,
 }
 
-const HomePage = ({ seo }) => {
+const HomePage = ({ }) => {
   return (
     <div>
-      <Seo title={seo} />
       <div style={introDetailsStyle}>
         <Text size="64" color="#282828" lHeight="55px" weight="1000">
           COREY
@@ -29,7 +27,7 @@ const HomePage = ({ seo }) => {
           developer with 5+ years of freelance <br />
           experience.
         </Text>
-        <Button>Contact Me</Button>
+        <Button navigateTo={"/projects"} >Contact Me</Button>
       </div>
     </div>
   )
