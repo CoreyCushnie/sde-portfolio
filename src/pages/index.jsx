@@ -1,4 +1,5 @@
 import * as React from "react"
+import { StaticImage } from "gatsby-plugin-image"
 
 // Components
 import Layout from "../components/layout"
@@ -9,13 +10,17 @@ import Header from "../components/header.component"
 import HomePage from "./page/homepage"
 import AboutPage from "./page/about"
 import ProjectPreviewPage from "./page/project"
+import Services from "./page/services"
 
 //Data
 import GET_DATA from "../queries";
-import Seo from "../components/seo"
+import Seo from "../components/seo";
+import LoadingGif from "../images/LogoLoading.gif";
 
 
 const IndexPage = () => {
+  const [loading, setLoading] = React.useState(true);
+  
 
   // Run all queries
   const data = GET_DATA()
@@ -26,19 +31,44 @@ const IndexPage = () => {
   const aboutData = data.site.siteMetadata?.pageData.aboutMeData
   const skillsData = data.site.siteMetadata?.pageData.skillsData
 
+  React.useEffect(() => {
+    setTimeout(() => {
+      setLoading(false)
+    }, 5000);
+  })
   return (
     <>
-      <Seo title="Home"/>
-      <Header headerData={headerData} contactData={contactData} />
-      <Layout seoTitle="Home" extended>
-        <HomePage />
-      </Layout>
-      <Layout seoTitle="About" >
-        <AboutPage aboutData={aboutData} skillsData={skillsData}/>
-      </Layout>
-      <Layout seoTitle="Projects">
-        <ProjectPreviewPage/>
-      </Layout>
+      {
+        loading ? (
+          <div style={{height: "100vh", display: "flex", alignItems: "center", justifyContent: "center"}}>
+            <img
+              src={LoadingGif}
+              width={500}
+              quality={50}
+              formats={["auto", "webp", "avif"]}
+              alt="blah"
+            />
+          </div>
+        ) : (
+          <>
+        <Seo title="Home"/>
+        <Header headerData={headerData} contactData={contactData} />
+        <Layout seoTitle="Home" extended>
+          <HomePage />
+        </Layout>
+        <Layout seoTitle="About" >
+          <AboutPage aboutData={aboutData} skillsData={skillsData}/>
+        </Layout>
+        <Layout seoTitle="Projects">
+          <ProjectPreviewPage/>
+        </Layout>
+        <Layout seoTitle="Services">
+          <Services/>
+        </Layout>
+        </>
+
+        )
+      }
     </>
   )
 }

@@ -36,7 +36,9 @@ const Projects = props => {
                 )
             })} 
             </div>  
-            <div className=""></div> 
+            <div className="">
+              
+            </div> 
         </div>
       </Layout>
     </>

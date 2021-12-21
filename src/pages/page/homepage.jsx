@@ -9,7 +9,8 @@ const introDetailsStyle = {
   textAlign: `left`,
 }
 
-const HomePage = ({ }) => {
+const HomePage = ({}) => {
+  
   return (
     <div>
       <div style={introDetailsStyle}>
@@ -27,7 +28,7 @@ const HomePage = ({ }) => {
           developer with 5+ years of freelance <br />
           experience.
         </Text>
-        <Button navigateTo={"/projects"} >Contact Me</Button>
+        <Button navigateTo={"/projects"}>Contact Me</Button>
       </div>
     </div>
   )

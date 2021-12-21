@@ -1,7 +1,7 @@
 .mini-project-container{
     display: flex;
     flex-direction: column;
-    opacity: 0.6;
+
     text-decoration: none;
     align-items: center;
     justify-content: center;
@@ -17,7 +17,7 @@
 }
 
 .mini-project-container:hover{
-    opacity: 1;
+
     cursor: pointer;
     transform: scale(1.1);
     text-decoration: none;
