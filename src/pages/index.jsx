@@ -30,6 +30,7 @@ const IndexPage = () => {
   const contactData = data.site.siteMetadata?.pageData.personalInfo
   const aboutData = data.site.siteMetadata?.pageData.aboutMeData
   const skillsData = data.site.siteMetadata?.pageData.skillsData
+  const serviceData = data.site.siteMetadata?.pageData.serviceData
 
   React.useEffect(() => {
     setTimeout(() => {
@@ -63,7 +64,7 @@ const IndexPage = () => {
           <ProjectPreviewPage/>
         </Layout>
         <Layout seoTitle="Services">
-          <Services/>
+          <Services serviceData={serviceData}/>
         </Layout>
         </>
 

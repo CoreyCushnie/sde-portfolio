@@ -38,6 +38,14 @@ export default function GET_DATA() {
               Gatsby
               ExpressJS
             }
+            servicesData {
+              website_creation
+              web_migration
+              mobile_application
+              _3d_mockup_design
+              landing_page_creation
+              software_consultation
+            }
           }
         }
       }
