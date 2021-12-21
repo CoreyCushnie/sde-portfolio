@@ -20,7 +20,7 @@ module.exports = {
       aboutMeData: {
         p1: "I’m a front-end web and mobile developer with 10 years of experimenting with different languages and frameworks and 6 years of freelance experience. Growing up in the city, I find inspiration around every corner. I love every step of the SDLC process and pride myself in the fast, responsive, and aestically pleasing applications I’ve had the pleasure to be apart of. Everything i’ve done until this point has helped me develop the skills needed to take a project to its next level. ",
         p2: "Discovering new concepts to ideas and solutions that exceed a user's expectation is what keeps me focused on technology's continuing advancement and strengthens my passion for engineering. I've cultivated a reputation as a contributor in every project I'm involved with and look forward to continuing to facilitate positive change and impacting outcomes.",
-        p3: "Outside of writing code, I have tons of hobbies and interests! I’m a fan of beautiful architecture and great experiences. I’m always listening to music or watching a TV show, and I love to travel."
+        p3: "Outside of writing code, I have tons of hobbies and interests! I’m a fan of beautiful architecture and great experiences. I’m always listening to music or watching a TV show, and I love to travel.",
       },
       personalInfo: {
         Name: `Corey Cushnie`,
@@ -29,27 +29,33 @@ module.exports = {
         "Social Links": {
           linkedin: `https://www.linkedin.com/in/corey-cushnie/`,
           github: `https://github.com/CoreyCushnie`,
-          dribbble: `https://dribbble.com/CoreyCushnie`
+          dribbble: `https://dribbble.com/CoreyCushnie`,
         },
       },
       skillsData: {
         "Front-End": 91,
         "Back-End": 79,
-        "Web": 93,
-        "Mobile": 89,
-        "Javascript": 87,
-        "Gatsby": 83,
-        "ExpressJS": 81,
-        "Python": 90
+        Web: 93,
+        Mobile: 89,
+        Javascript: 87,
+        Gatsby: 83,
+        ExpressJS: 81,
+        Python: 90,
       },
-      servicesData: {
-        "website-creation" : "Launch your personal blog, develop a business web application, or an easy to manage mult-page website",
-        "web-migration" : "Modernize your current web platform by migrating over to the scalable, simple to manage framework, React",
-        "mobile-application" : "Build your businesses mobile solution with modern technologies, creating the perfect product for you and your clients",
-        "3d-mockup-design" : "Present professional 3D mockups of your web or mobile businesses to shareholders, or potential clients",
-        "landing-page-creation" : "Increase the buzz about your product by creating a landing page for users to stay up-to-date on product news",
-        "software-consultation" : "Discuss your ideas to help better understand your clients and users, selecting the best technologies for your business",
-      }
+      serviceData: {
+        "website-creation":
+          "Launch your personal blog, develop a business web application, or an easy to manage mult-page website",
+        "web-migration":
+          "Modernize your current web platform by migrating over to the scalable, simple to manage framework, React",
+        "mobile-application":
+          "Build your businesses mobile solution with modern technologies, creating the perfect product for you and your clients",
+        "3d-mockup-design":
+          "Present professional 3D mockups of your web or mobile businesses to shareholders, or potential clients",
+        "landing-page-creation":
+          "Increase the buzz about your product by creating a landing page for users to stay up-to-date on product news",
+        "software-consultation":
+          "Discuss your ideas to help better understand your clients and users, selecting the best technologies for your business",
+      },
     },
   },
   plugins: [

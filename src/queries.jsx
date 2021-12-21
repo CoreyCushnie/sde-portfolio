@@ -38,7 +38,7 @@ export default function GET_DATA() {
               Gatsby
               ExpressJS
             }
-            servicesData {
+            serviceData {
               website_creation
               web_migration
               mobile_application
