@@ -5,6 +5,8 @@ html {
   overflow-y: scroll;
   background-color: #f8f8ff;
   scroll-behavior: smooth;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 body {
   margin: 0;
@@ -19,7 +21,6 @@ body {
   -ms-font-feature-settings: "kern", "liga", "clig", "calt";
   -webkit-font-feature-settings: "kern", "liga", "clig", "calt";
   font-feature-settings: "kern", "liga", "clig", "calt";
-
 }
 
 .layout-container {
@@ -57,19 +58,17 @@ body {
   cursor: pointer;
 }
 
-.social-links{
+.social-links {
   display: flex;
   align-items: center;
   margin: 5px 0px 10px 15px;
-
-
 }
 
-.social-icons{
+.social-icons {
   padding-right: 10px;
 }
 
-.contact-details{
+.contact-details {
   bottom: 2vh;
   left: 5vw;
   position: fixed;

@@ -1,0 +1,40 @@
+label {
+  display: block;
+  transform: translate(0, -2.75rem);
+}
+
+
+input, textarea {
+    border: none;
+    border-bottom: 1px solid lightgray;
+    background-color: #f8f8ff;
+    width: 100%;
+    outline: none;
+    height: auto
+}
+@supports (not (-ms-ime-align:auto)) {
+    label {
+      color: #999;
+      transform: translate(0.25rem, -1.5rem);
+      transition: all 0.2s ease-out;
+      font-size: 12px;
+      
+    }
+
+    input:focus + label,
+    input:not(:placeholder-shown) + label {
+      color: #282828;
+      transform: scale(0.8) translate(-1.75rem, -2.75rem);
+      outline: none;
+      
+    }
+
+    textarea:focus + label,
+    textarea:not(:placeholder-shown) + label {
+      color: #282828;
+      transform: scale(0.8) translate(-1.75rem, -5rem);
+      outline: none;
+      
+      
+    }
+}

@@ -10,22 +10,38 @@ const introDetailsStyle = {
 }
 
 const HomePage = ({}) => {
-  
   return (
-    <div>
+    <div
+      style={{
+        position: "absolute",
+        display: "flex",
+        left: "22vw",
+        top: "200px",
+      }}
+    >
+      <div
+        style={{
+          height: "500px",
+          width: "300px",
+          marginRight: "60px",
+          backgroundColor: "#f8f8ff",
+
+          boxShadow: "inset 0 -3em 3em rgba(0,0,0,0.01), 0 0  0 2px #f8f8f8, 0em 0em 1em rgba(0,0,0,0.3)"
+        }}
+      ></div>
       <div style={introDetailsStyle}>
-        <Text size="64" color="#282828" lHeight="55px" weight="1000">
+        <Text size="104" color="#282828" lHeight="85px" weight="900">
           COREY
           <br />
           CUSHNIE
         </Text>
-        <Text size="28" color="#B72828" lHeight="28px" weight="1000">
+        <Text size="45" color="#B72828" lHeight="45px" weight="900">
           Front-end Developer
         </Text>
 
-        <Text size="18" margin="20px 0" color="#282828">
+        <Text size="28" margin="20px 0" color="#282828">
           I’m Corey, web and mobile <br />
-          developer with 5+ years of freelance <br />
+          developer with 6+ years of freelance <br />
           experience.
         </Text>
         <Button navigateTo={"/projects"}>Contact Me</Button>

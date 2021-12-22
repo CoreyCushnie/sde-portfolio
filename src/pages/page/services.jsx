@@ -24,8 +24,8 @@ const Services = ({ serviceData, ...props }) => {
   }
 
   return (
-    <div id="services">
-      <Text size="32" color="#282828" weight="900">
+    <div>
+      <Text size="52" color="#282828" weight="900">
         SERVICES
       </Text>
 

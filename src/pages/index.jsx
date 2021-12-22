@@ -10,6 +10,7 @@ import HomePage from "./page/homepage"
 import AboutPage from "./page/about"
 import ProjectPreviewPage from "./page/project"
 import Services from "./page/services"
+import Contact from "./page/contact"
 
 //Data
 import GET_DATA from "../queries"
@@ -32,7 +33,7 @@ const IndexPage = () => {
   React.useEffect(() => {
     setTimeout(() => {
       setLoading(false)
-    }, 5000)
+    }, 3000)
   })
   return (
     <>
@@ -57,20 +58,20 @@ const IndexPage = () => {
         <>
           <Seo title="Home" />
           <Header headerData={headerData} contactData={contactData} />
-          <Layout seoTitle="Home" extended>
+          <Layout id="home" seoTitle="Home" extended>
             <HomePage />
           </Layout>
-          <Layout seoTitle="About">
+          <Layout id="about" seoTitle="About">
             <AboutPage aboutData={aboutData} skillsData={skillsData} />
           </Layout>
-          <Layout seoTitle="Projects">
+          <Layout id="projects" seoTitle="Projects">
             <ProjectPreviewPage />
           </Layout>
-          <Layout seoTitle="Services">
+          <Layout id="services" seoTitle="Services">
             <Services serviceData={serviceData} />
           </Layout>
-          <Layout seoTitle="Contact" extended>
-            <Services serviceData={serviceData} />
+          <Layout id="contact" seoTitle="Contact" extended>
+            <Contact />
           </Layout>
         </>
       )}

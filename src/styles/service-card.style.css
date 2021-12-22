@@ -1,7 +1,6 @@
 .service-card-container{
     display: flex;
     flex-direction: column;
-
     text-decoration: none;
     align-items: flex-start;
     justify-content: center;

@@ -7,12 +7,12 @@ import Seo from "./seo";
 // CSS 
 import "../styles/layout.css"
 
-const Layout = ({ seo, extended, children }) => {
+const Layout = ({ seo, extended, children, id }) => {
 
   return (
     <>
     <Seo title={seo}/>
-    <div className="layout-container">
+    <div className="layout-container" id={id}>
 
       {/* Left */}
       <div 
@@ -32,8 +32,10 @@ const Layout = ({ seo, extended, children }) => {
         >
           <main
             style={{
-              padding: "40px 0 40px 60px",
-              height: "auto",
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              
             }}
           >
             {children}

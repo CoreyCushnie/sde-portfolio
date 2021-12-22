@@ -5,21 +5,28 @@ import Text from "./Text"
 
 import "../styles/service-card.style.css"
 
-const ServiceCard = ({ title, details, turnAroundTime }) => {
+const ServiceCard = ({ title, details, details2, turnAroundTime, upper }) => {
   return (
     <>
       <div className="service-card-container">
         <div>
           <Text size={14} weight="900" color="#B72828">
-            {title}
+            {title.toUpperCase()}
           </Text>
         </div>
 
         <div>
           <Text size={12} color="#282828" margin="10px 0">
-            {details}
+            {upper ? details.toUpperCase() : details}
           </Text>
         </div>
+        {details2 && (
+          <div>
+          <Text size={12} color="#282828" margin="10px 0">
+            {upper ? details2.toUpperCase() : details2}
+          </Text>
+        </div>
+        )}
         <div
           style={{
             display: "flex",

@@ -10,8 +10,8 @@ import "../../styles/project.style.css"
 
 const ProjectPreviewPage = (props) => {
     return (
-        <div id="projects">
-            <Text size="32" color="#282828" weight="900">PROJECTS</Text>
+        <div>
+            <Text size="52" color="#282828" weight="900">PROJECTS</Text>
             <div className="project-preview-container">
                 <MiniProjectCard />
             </div>
