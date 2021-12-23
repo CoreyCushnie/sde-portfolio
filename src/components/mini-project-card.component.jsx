@@ -21,7 +21,7 @@ const MiniProjectCard = ({ projectData, linkIdx }) => {
         width={200}
         quality={50}
         formats={["auto", "webp", "avif"]}
-        alt="prod1"
+        alt="proj1"
       />
 
       <div className="mini-project-description">
@@ -40,7 +40,7 @@ const MiniProjectCard = ({ projectData, linkIdx }) => {
         width={200}
         quality={50}
         formats={["auto", "webp", "avif"]}
-        alt="prod2"
+        alt="proj2"
       />
 
       <div className="mini-project-description">
@@ -59,7 +59,7 @@ const MiniProjectCard = ({ projectData, linkIdx }) => {
         width={200}
         quality={50}
         formats={["auto", "webp", "avif"]}
-        alt="prod3"
+        alt="proj3"
       />
 
       <div className="mini-project-description">
@@ -78,7 +78,7 @@ const MiniProjectCard = ({ projectData, linkIdx }) => {
         width={160}
         quality={50}
         formats={["auto", "webp", "avif"]}
-        alt="prod4"
+        alt="proj4"
       />
 
       <div className="mini-project-description">

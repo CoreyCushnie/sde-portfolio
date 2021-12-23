@@ -1,6 +1,5 @@
 import * as React from "react"
 
-import { StaticImage } from "gatsby-plugin-image"
 import Text from "./Text"
 
 import "../styles/service-card.style.css"
@@ -16,13 +15,13 @@ const ServiceCard = ({ title, details, details2, turnAroundTime, upper }) => {
         </div>
 
         <div>
-          <Text size={12} color="#282828" margin="10px 0">
+          <Text size={12} color="#282828" margin="5px 0">
             {upper ? details.toUpperCase() : details}
           </Text>
         </div>
         {details2 && (
           <div>
-          <Text size={12} color="#282828" margin="10px 0">
+          <Text size={12} color="#282828" margin="5px 0">
             {upper ? details2.toUpperCase() : details2}
           </Text>
         </div>

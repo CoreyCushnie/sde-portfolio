@@ -20,7 +20,7 @@ const Skills = ({ skillsData }) => {
           className="bar-container"
           style={{
             height: "10px",
-            width: "100%",
+            width: window.innerWidth < 1000 ? "85vw" : "100%",
             backgroundColor: "#C4C4C47d",
             padding: "5px",
             borderRadius: "20px"

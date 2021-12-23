@@ -1,5 +1,4 @@
 import * as React from "react"
-import { StaticImage } from "gatsby-plugin-image"
 
 // Components
 import Layout from "../components/layout"
@@ -16,6 +15,9 @@ import Contact from "./page/contact"
 import GET_DATA from "../queries"
 import Seo from "../components/seo"
 import LoadingGif from "../images/LogoLoading.gif"
+
+import '../styles/index.css';
+import ContactInfo from "../components/contact.component"
 
 const IndexPage = () => {
   const [loading, setLoading] = React.useState(true)
@@ -55,16 +57,16 @@ const IndexPage = () => {
           />
         </div>
       ) : (
-        <>
+        <div className="app-container">
           <Seo title="Home" />
           <Header headerData={headerData} contactData={contactData} />
-          <Layout id="home" seoTitle="Home" extended>
+           <Layout id="home" seoTitle="Home" extended>
             <HomePage />
-          </Layout>
-          <Layout id="about" seoTitle="About">
+          </Layout> 
+         <Layout id="about" seoTitle="About">
             <AboutPage aboutData={aboutData} skillsData={skillsData} />
-          </Layout>
-          <Layout id="projects" seoTitle="Projects">
+          </Layout> 
+            <Layout id="projects" seoTitle="Projects">
             <ProjectPreviewPage />
           </Layout>
           <Layout id="services" seoTitle="Services">
@@ -73,7 +75,10 @@ const IndexPage = () => {
           <Layout id="contact" seoTitle="Contact" extended>
             <Contact />
           </Layout>
-        </>
+          <div className="footer">
+            <ContactInfo data={contactData} mobile />
+          </div>
+        </div>
       )}
     </>
   )

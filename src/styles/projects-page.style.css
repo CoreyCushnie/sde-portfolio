@@ -1,32 +1,61 @@
-.projects-container{
+@media only screen and (min-width: 1150px) {
+  .projects-container {
     display: flex;
     flex-direction: row;
-}
+  }
 
-.projects-selection-container{
+  .projects-selection-container {
     margin-top: 40px;
     display: flex;
     align-items: center;
     text-align: center;
     justify-content: space-between;
-    
-}
+  }
 
-.selection-button {
-
+  .selection-button {
     cursor: pointer;
     padding: 20px;
     margin-right: 20px;
     transition: 200ms ease-out;
     animation-duration: 2ms;
-    
-}
+  }
 
-.selection-button:focus  {
+  .selection-button:focus {
     cursor: pointer;
     padding: 20px;
     margin-right: 20px;
     transition: 200ms ease-out;
     animation-duration: 2ms;
-    
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .projects-container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .projects-selection-container {
+    margin-top: 40px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+  }
+
+  .selection-button {
+    cursor: pointer;
+    padding: 20px;
+    margin-right: 20px;
+    transition: 200ms ease-out;
+    animation-duration: 2ms;
+  }
+
+  .selection-button:focus {
+    cursor: pointer;
+    padding: 20px;
+    margin-right: 20px;
+    transition: 200ms ease-out;
+    animation-duration: 2ms;
+  }
 }

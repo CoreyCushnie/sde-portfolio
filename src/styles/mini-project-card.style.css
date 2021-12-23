@@ -1,4 +1,5 @@
-.mini-project-container{
+@media only screen and (min-width: 1150px) {
+  .mini-project-container {
     display: flex;
     flex-direction: column;
 
@@ -10,14 +11,11 @@
     margin: 16px 32px 16px 0;
     transition: 200ms ease-out;
     animation-duration: 2ms;
-    box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.01),
-             0 0  0 2px #f8f8f8,
-             0em 0em 1em rgba(0,0,0,0.3);
-}
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.01), 0 0 0 2px #f8f8f8,
+      0em 0em 1em rgba(0, 0, 0, 0.3);
+  }
 
-.mini-project-container:hover{
-
+  .mini-project-container:hover {
     cursor: pointer;
     transform: scale(1.1);
     text-decoration: none;
@@ -25,22 +23,62 @@
     padding: 20px;
     margin: 16px 32px 16px 0;
     border: none;
-    box-shadow:
-       inset 0 -3em 3em rgba(0,0,0,0.01),
-             0 0  0 2px #f8f8f8,
-             0.3em 0.3em 1em rgba(0,0,0,0.3);
-}
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.01), 0 0 0 2px #f8f8f8,
+      0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
 
-.mini-project-image{
-   margin: 0 50px;
-    
-}
+  .mini-project-image {
+    margin: 0 50px;
+  }
 
-.mini-project-description{
+  .mini-project-description {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     justify-content: center;
     margin: 20px 0 0 0;
+  }
+}
+
+@media only screen and (max-width: 1150px) {
+  .mini-project-container {
+      width: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    margin: 16px 0;
+    transition: 200ms ease-out;
+    animation-duration: 2ms;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.01), 0 0 0 2px #f8f8f8,
+      0em 0em 1em rgba(0, 0, 0, 0.3);
+  }
+
+  .mini-project-container:hover {
+    cursor: pointer;
+    transform: scale(1.1);
+    text-decoration: none;
+    width: 300px;
+    padding: 20px;
+    margin: 16px 32px 16px 0;
+    border: none;
+    box-shadow: inset 0 -3em 3em rgba(0, 0, 0, 0.01), 0 0 0 2px #f8f8f8,
+      0.3em 0.3em 1em rgba(0, 0, 0, 0.3);
+  }
+
+  .mini-project-image {
+    margin: 0 50px;
+  }
+
+  .mini-project-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 20px 0 0 0;
+  }
 }

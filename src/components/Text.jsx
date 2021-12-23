@@ -11,7 +11,7 @@ const Text = styled.p`
     color: ${(props => props.color ? props.color : "#f8f8f8" )};
     font-family: montserrat, sans-serif;
     align-self: ${({ alignSelf }) => alignSelf ? alignSelf : "center"};
-    font-size: ${({ size }) => size ? `${size}px`  : "12px"};
+    font-size: ${({ size }) => size ? `${size/18}rem`  : "12px"};
     font-weight: ${({ weight }) => weight ? weight : 400};
     margin: ${({ margin }) => margin ? margin : "0px"};
     line-height: ${({ lHeight }) => lHeight ? lHeight : "auto"};

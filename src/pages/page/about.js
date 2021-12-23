@@ -7,26 +7,37 @@ import Skills from "../../components/skills.component"
 import "../../styles/about.style.css"
 
 const AboutPage = ({ aboutData, skillsData }) => {
-  const textSize = 14
+  const textSize = 12
   return (
-    <div >
+    <div>
       <div className="about-details-container">
-        <Text size="52" color="#282828" weight="900" margin="0 0 20px 0">
+        <Text
+          alignSelf={window.innerWidth < 1000 && "left"}
+          size="42"
+          color="#282828"
+          weight="900"
+          margin="0 0 15px 0"
+        >
           ABOUT ME
         </Text>
-        <Text size={textSize} lHeight="25px" margin="15px 0" color="black">
+        <Text size={textSize} lHeight="15px" margin="10px 0" color="black">
           {aboutData.p1}
         </Text>
-        <Text size={textSize} lHeight="25px" margin="15px 0" color="black">
+        <Text size={textSize} lHeight="15px" margin="10px 0" color="black">
           {aboutData.p2}
         </Text>
-        <Text size={textSize} lHeight="25px" margin="15px 0" color="black">
+        <Text size={textSize} lHeight="15px" margin="10px 0" color="black">
           {aboutData.p3}
         </Text>
       </div>
       <div className="bottom-container">
         <div className="about-education">
-          <Text size="52" color="#282828" weight="900">
+          <Text
+            alignSelf={window.innerWidth < 1000 && "left"}
+            size="42"
+            color="#282828"
+            weight="900"
+          >
             EDUCATION
           </Text>
 
@@ -45,10 +56,17 @@ const AboutPage = ({ aboutData, skillsData }) => {
           />
         </div>
         <div className="about-skills">
-          <Text size="52" color="#282828" weight="900">
+          <Text
+            alignSelf={window.innerWidth < 1000 && "left"}
+            size="42"
+            color="#282828"
+            weight="900"
+          >
             SKILLS
           </Text>
-          <Skills skillsData={skillsData} />
+          <div style={{margin: "20px 0"}}>
+            <Skills skillsData={skillsData} />
+          </div>
         </div>
       </div>
     </div>

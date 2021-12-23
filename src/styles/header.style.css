@@ -1,10 +1,10 @@
-header{
+@media only screen and (min-width: 1150px) {
+  header {
     position: fixed;
     z-index: 1;
-    
-}
+  }
 
-.nav-container {
+  .nav-container {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -12,24 +12,111 @@ header{
     right: 5vw;
     position: fixed;
     backdrop-filter: blur(10px);
-    
+  }
 
-}
-
-.nav-links {
+  .nav-links {
     text-decoration: none;
     color: #282828;
     margin-left: 1px;
-    padding: 10px; 
+    padding: 10px;
     transition: 200ms ease-out;
     animation-duration: 2ms;
+  }
 
+  .nav-links:hover {
+    background-color: #b72828;
+    color: #f8f8ff;
+  }
+
+  .logo {
+    transition: 200ms ease-out;
+    animation-duration: 2s;
+    top: 2vh;
+    left: 5vw;
+    position: fixed;
+  }
+
+  .logo:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+  }
+
+  .social-links {
+    display: flex;
+    align-items: center;
+    margin: 5px 0px 10px 15px;
+  }
+
+  .social-icons {
+    padding-right: 10px;
+  }
 }
 
-.nav-links:hover {
-    background-color: #B72828;
-    color: #F8F8FF;
+@media only screen and (max-width: 1150px) {
+    header {
+        position: fixed;
+        z-index: 1;
+        background-color: #282828;
+        padding: 20px;
+        
+      }
+    
+      .header-container{
+        display: flex;
+        z-index: 3;
+        width: 100vw;
+        align-items: center;
+        justify-content: space-between;
+        background-color: #282828;
+        height: auto;
+      }
 
 
+      .nav-container {
+        display: flex;
+        flex-direction: column;
+        background-color: #282828;
+        align-items: center;
+        justify-content: space-evenly;
+        top: 45px;
+        right: 0;
 
+        position: fixed;
+        padding: 20px;
+      }
+    
+      .nav-links {
+        text-decoration: none;
+        color: #f8f8ff;
+        padding: 5px;
+
+        transition: 200ms ease-out;
+        animation-duration: 2ms;
+      }
+    
+      .nav-links:hover {
+        background-color: #b72828;
+        color: #f8f8ff;
+      }
+
+      .logo {
+        transition: 200ms ease-out;
+        animation-duration: 2s;
+        z-index: 2;
+      }
+    
+      .logo:hover {
+        transform: scale(1.1);
+        cursor: pointer;
+      }
+    
+      .social-links {
+        display: flex;
+        align-items: center;
+        margin: 5px 0px 10px 15px;
+      }
+    
+      .social-icons {
+        padding-right: 10px;
+      }
 }

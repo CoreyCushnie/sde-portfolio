@@ -13,21 +13,23 @@ const Layout = ({ seo, extended, children, id }) => {
     <>
     <Seo title={seo}/>
     <div className="layout-container" id={id}>
+      {window.innerWidth > 1000 && (
 
-      {/* Left */}
-      <div 
-        className="layout-content-left" 
-        style={{ width: extended ? "30vw" : "20vw"
-      }}>
-        
-      </div>
+        <div 
+          className="layout-content-left" 
+          style={{ width: extended ? "30vw" : "20vw"
+        }}>
+          
+        </div>
+      )}
 
       {/* Right  */}
       <div className="layout-content-right">
 
         <div
           style={{
-            flex: 1
+            flex: 1,
+            
           }}
         >
           <main
@@ -35,6 +37,7 @@ const Layout = ({ seo, extended, children, id }) => {
               display: "flex",
               alignItems: "center",
               justifyContent: "center",
+              
               
             }}
           >
