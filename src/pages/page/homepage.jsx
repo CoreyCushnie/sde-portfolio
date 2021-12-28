@@ -26,12 +26,13 @@ const HomePage = ({}) => {
 
   return (
     <div className="home-container">
-      <div className="home-image-container">
+      <div className="home-image-container" align="center">
         <img
           src={me}
+          style={{ borderRadius: "1000px"}}
           width="100%"
           height="100%"
-          quality={20}
+          quality={50}
           formats={["auto", "webp", "avif"]}
           alt="HomePhoto"
         />

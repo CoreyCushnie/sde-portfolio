@@ -75,9 +75,12 @@ const IndexPage = () => {
           <Layout id="contact" seoTitle="Contact" extended>
             <Contact />
           </Layout>
+          {window.innerWidth < 1100 && (
+
           <div className="footer">
             <ContactInfo data={contactData} mobile />
           </div>
+          )}
         </div>
       )}
     </>

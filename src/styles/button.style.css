@@ -14,5 +14,5 @@
   width: fit-content;
   cursor: pointer;
   box-shadow: -5px 5px #b728285f;
-  transform: translateX(5px) translateY(-5px);
+  /* transform: translateX(5px) translateY(-5px); */
 }

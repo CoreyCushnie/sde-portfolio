@@ -1,51 +1,43 @@
-// React 
+// React
 import * as React from "react"
 import PropTypes from "prop-types"
 
-import Seo from "./seo";
+import Seo from "./seo"
 
-// CSS 
+// CSS
 import "../styles/layout.css"
 
 const Layout = ({ seo, extended, children, id }) => {
-
   return (
     <>
-    <Seo title={seo}/>
-    <div className="layout-container" id={id}>
-      {window.innerWidth > 1000 && (
+      <Seo title={seo} />
+      <div className="layout-container" id={id}>
+        {window.innerWidth > 1000 && (
+          <div
+            className="layout-content-left"
+            style={{ width: extended ? "30vw" : "20vw" }}
+          ></div>
+        )}
 
-        <div 
-          className="layout-content-left" 
-          style={{ width: extended ? "30vw" : "20vw"
-        }}>
-          
-        </div>
-      )}
-
-      {/* Right  */}
-      <div className="layout-content-right">
-
-        <div
-          style={{
-            flex: 1,
-            
-          }}
-        >
-          <main
+        {/* Right  */}
+        <div className="layout-content-right">
+          <div
             style={{
-              display: "flex",
-              alignItems: "center",
-              justifyContent: "center",
-              
-              
+              flex: 1,
             }}
           >
-            {children}
-          </main>
+            <main
+              style={{
+                display: "flex",
+                alignItems: "center",
+                justifyContent: "flex-start",
+              }}
+            >
+              {children}
+            </main>
+          </div>
         </div>
       </div>
-    </div>
     </>
   )
 }
