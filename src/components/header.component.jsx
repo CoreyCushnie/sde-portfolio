@@ -12,14 +12,16 @@ import { RiMenu4Line } from 'react-icons/ri';
 const navTitles = ["home", "about", "projects", "services", "contact"]
 
 const Header = ({ headerData, contactData }) => {
+  
   const [showNav, setShow] = React.useState(false);
+
   return (
     <header>
-      {window.innerWidth > 1000 ? (
+      { typeof window !== 'undefined' && window.innerWidth > 1000 ? (
         <>
           <div
             style={{
-              margin: "20px 0 0 5vw",
+              margin: "20px 0 0 0vw",
             }}
           >
             <Link to="/">

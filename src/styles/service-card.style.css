@@ -45,7 +45,7 @@
 
   .service-card-container:hover {
     cursor: pointer;
-    transform: scale(1.1);
+
     text-decoration: none;
     width: 300px;
     padding: 20px;

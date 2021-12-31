@@ -39,13 +39,13 @@ const Contact = ({}) => {
         <div className="contact-card">
           <Text
             size="42"
-            alignSelf={window.innerWidth < 1000 && "left"}
+            alignSelf={typeof window !== 'undefined' && window.innerWidth < 1000 && "left"}
             color="#282828"
             weight="900"
           >
             CONTACT
           </Text>
-          <div style={{ marginBottom: window.innerWidth < 1000 && "20px" }}>
+          <div style={{ marginBottom: typeof window !== 'undefined' && window.innerWidth < 1000 && "20px" }}>
             <ServiceCard
               upper
               title="Location"

@@ -41,7 +41,7 @@
 
   .card-container:hover {
     cursor: pointer;
-    transform: scale(1.1);
+
     width: 70%;
     padding: 20px;
     text-align: center;

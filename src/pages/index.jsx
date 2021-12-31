@@ -30,13 +30,14 @@ const IndexPage = () => {
   const contactData = data.site.siteMetadata?.pageData.personalInfo
   const aboutData = data.site.siteMetadata?.pageData.aboutMeData
   const skillsData = data.site.siteMetadata?.pageData.skillsData
-  const serviceData = data.site.siteMetadata?.pageData.serviceData
+  // const serviceData = data.site.siteMetadata?.pageData?.serviceData
 
   React.useEffect(() => {
     setTimeout(() => {
       setLoading(false)
     }, 3000)
-  })
+  }, [])
+
   return (
     <>
       {loading ? (
@@ -46,6 +47,8 @@ const IndexPage = () => {
             display: "flex",
             alignItems: "center",
             justifyContent: "center",
+            transition: "200ms ease-out",
+            animationDuration: "2ms"
           }}
         >
           <img
@@ -64,13 +67,13 @@ const IndexPage = () => {
             <HomePage />
           </Layout> 
          <Layout id="about" seoTitle="About">
-            <AboutPage aboutData={aboutData} skillsData={skillsData} />
+            <AboutPage skillsData={skillsData} />
           </Layout> 
             <Layout id="projects" seoTitle="Projects">
             <ProjectPreviewPage />
           </Layout>
           <Layout id="services" seoTitle="Services">
-            <Services serviceData={serviceData} />
+            <Services />
           </Layout>
           <Layout id="contact" seoTitle="Contact" extended>
             <Contact />

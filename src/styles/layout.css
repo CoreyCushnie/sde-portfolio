@@ -4,7 +4,7 @@
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
     overflow-y: scroll;
-    background-color: #282828;
+    background-color: #f8f8ff;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -88,7 +88,7 @@
     -webkit-text-size-adjust: 100%;
     box-sizing: border-box;
     overflow-y: scroll;
-    background-color: #282828;
+    background-color: #f8f8ff;
     scroll-behavior: smooth;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
@@ -120,8 +120,9 @@
     flex-wrap: wrap;
     margin-top: 60px;
     height: fit-content;
-    width: 100%;
+    width: 100vw;
     padding: 20px;
+   
     background-color: #f8f8ff
   }
 

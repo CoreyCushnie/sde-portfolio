@@ -26,11 +26,11 @@ const HomePage = ({}) => {
 
   return (
     <div className="home-container">
-      <div className="home-image-container" align="center">
+      <div className="home-image-container">
         <img
           src={me}
-          style={{ borderRadius: "1000px"}}
-          width="100%"
+          style={{ clipPath: typeof window !== 'undefined' && window.innerWidth < 600 && "circle(150px at center"}}
+          width="105%"
           height="100%"
           quality={50}
           formats={["auto", "webp", "avif"]}

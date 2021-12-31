@@ -1,10 +1,9 @@
 import * as React from "react"
 
 import Text from "./Text"
-import "../styles/header.style.css"
+import "../styles/project-layout.style.css"
 
 import { IoCaretForwardOutline, IoCaretBackOutline } from "react-icons/io5"
-import { StaticImage } from "gatsby-plugin-image"
 
 const ProjectDisplay = ({
   logo,
@@ -20,16 +19,17 @@ const ProjectDisplay = ({
 }) => {
 
   return (
-    <div style={{ width: "80%" }}>
-      <div style={{ margin: "20px 0", display: "flex", flexWrap: "wrap", width: "100%"}}>
-        <div align="center" style={{ flex: 1, margin: "auto 0", width: "50%" }}>
+    <div className="project-layout-container">
+      <div className="project-layout-media">
+        <div align="center" className="project-logo">
           <img src={logo} alt={logo} width="100px" />
         </div>
-        <div align="center" style={{ flex: 1, margin: "auto", width:"50%"}}>
+        <div align="center" className="project-layout-image" >
           <img
             src={imageScr[imageID]}
             alt={imageScr[imageID]}
-            width={pType === "Web" ? "100%" : "100%"}
+            width={pType === "Web" ? "100%" : "90%"}
+            style={{transform: pType === "Mobile" && "translateX(-10px)"}}
           />
           <div
             style={{
@@ -64,19 +64,19 @@ const ProjectDisplay = ({
         {" "}
         {title}{" "}
       </Text>
-      <div style={{ display: "flex", flexDirection: "row", padding: "10px 0" }}>
+      <div style={{ display: "flex", flexDirection: "row", padding: "5px 0", overflow: "scroll"}}>
         {tStack.map((val, idx) => {
           return (
             <Text
               key={idx}
               style={{
                 backgroundColor: "#B72828",
-                padding: "10px",
+                padding: "5px",
                 borderRadius: "30px",
               }}
               color="#f8f8ff"
-              size={14}
-              margin="0px 10px 0 0 "
+              size={12}
+              margin="0px 5px 0 0"
             >
               {" "}
               {val}{" "}

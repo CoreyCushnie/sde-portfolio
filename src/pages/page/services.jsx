@@ -6,7 +6,7 @@ import Button from "../../components/button.component"
 
 import "../../styles/services.style.css"
 
-const Services = ({ serviceData, ...props }) => {
+const Services = ({ ...props }) => {
   const turnAround = [
     "10 days",
     "1 month",
@@ -15,8 +15,24 @@ const Services = ({ serviceData, ...props }) => {
     "1-week",
     "3 days",
   ]
+  const serviceData = {
+    "website-creation":
+      "Launch your personal blog, develop a business web application, or an easy to manage mult-page website",
+    "web-migration":
+      "Modernize your current web platform by migrating over to the scalable, simple to manage framework, React",
+    "mobile-application":
+      "Build your businesses mobile solution with modern technologies, creating the perfect product for you and your clients",
+    "3d-mockup-design":
+      "Present professional 3D mockups of your web or mobile businesses to shareholders, or potential clients",
+    "landing-page-creation":
+      "Increase the buzz about your product by creating a landing page for users to stay up-to-date on product news",
+    "software-consultation":
+      "Discuss your ideas to help better understand your clients and users, selecting the best technologies for your business",
+  }
+
   function getServiceData(x) {
     const res = []
+    
     for (const [key, value] of Object.entries(x)) {
       res.push([key, value])
     }

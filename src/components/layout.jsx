@@ -8,11 +8,24 @@ import Seo from "./seo"
 import "../styles/layout.css"
 
 const Layout = ({ seo, extended, children, id }) => {
+  // define dimension variables for use in hook
+  let height;
+  let width;
+  // Check for the window element. 
+  // Needed for server size rendering of Gatsby else use of window.innerHeight/Width will cause build failures.
+  if (typeof window !== `undefined`) {
+    height = window.innerHeight
+    width = window.innerWidth
+  }
+
+  
   return (
     <>
       <Seo title={seo} />
       <div className="layout-container" id={id}>
-        {window.innerWidth > 1000 && (
+
+        {
+        width > 1000 && (
           <div
             className="layout-content-left"
             style={{ width: extended ? "30vw" : "20vw" }}

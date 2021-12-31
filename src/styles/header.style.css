@@ -110,13 +110,4 @@
         cursor: pointer;
       }
     
-      .social-links {
-        display: flex;
-        align-items: center;
-        margin: 5px 0px 10px 15px;
-      }
-    
-      .social-icons {
-        padding-right: 10px;
-      }
 }
